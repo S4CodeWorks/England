@@ -3,97 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>England FC - Calendário e Notícias</title>
+    <title>England FC - Página Oficial</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Inicializar AOS (para animações de rolagem)
             AOS.init();
-
-            const games = [
-                { time: "16:00", day: "2024-12-01", opponent: "Team A", championship: "Campeonato 1" },
-                { time: "18:00", day: "2024-12-05", opponent: "Team B", championship: "Campeonato 2" },
-                { time: "20:00", day: "2024-12-10", opponent: "Team C", championship: "Campeonato 3" }
-            ];
-
-            const calendarSection = document.getElementById("calendar");
-            const buttonGroup = document.createElement("div");
-            buttonGroup.classList.add("button-group");
-
-            ["Data", "Hora", "Adversário", "Campeonato"].forEach(label => {
-                const button = document.createElement("button");
-                button.textContent = label;
-                button.addEventListener("click", () => {
-                    renderGames(label.toLowerCase());
-                });
-                buttonGroup.appendChild(button);
-            });
-
-            calendarSection.prepend(buttonGroup);
-
-            const gameInfo = document.createElement("div");
-            gameInfo.classList.add("game-info");
-            calendarSection.appendChild(gameInfo);
-
-            function renderGames(criteria) {
-                let content = "";
-                games.forEach(game => {
-                    if (criteria === "data") {
-                        content += `<p><strong>Data:</strong> ${game.day}</p>`;
-                    } else if (criteria === "hora") {
-                        content += `<p><strong>Hora:</strong> ${game.time}</p>`;
-                    } else if (criteria === "adversário") {
-                        content += `<p><strong>Adversário:</strong> ${game.opponent}</p>`;
-                    } else if (criteria === "campeonato") {
-                        content += `<p><strong>Campeonato:</strong> ${game.championship}</p>`;
-                    }
-                });
-                gameInfo.innerHTML = content;
-                gameInfo.classList.add("visible");
-            }
-
-            const news = [
-                { result: "3x2", goals: ["João (10')", "Carlos (45')", "Pedro (78')"] },
-                { result: "1x1", goals: ["Lucas (22')"] },
-                { result: "0x0", goals: [] }
-            ];
-
-            const newsList = document.getElementById("news-list");
-
-            news.forEach(match => {
-                const newsItem = document.createElement("div");
-                newsItem.classList.add("news-item");
-
-                const result = document.createElement("h3");
-                result.textContent = `Resultado: ${match.result}`;
-                newsItem.appendChild(result);
-
-                const goals = document.createElement("p");
-                goals.innerHTML = `<strong>Gols:</strong> ${match.goals.length > 0 ? match.goals.join(", ") : "Nenhum gol."}`;
-                newsItem.appendChild(goals);
-
-                newsList.appendChild(newsItem);
-            });
         });
     </script>
 </head>
 <body>
     <header>
-        <img src="https://i.imgur.com/T2MLN5B.png" alt="Logo England FC">
-        <h1>England FC</h1>
+        <div class="header-container">
+            <img src="https://i.imgur.com/T2MLN5B.png" alt="Logo England FC">
+            <h1>England - RevoBall</h1>
+        </div>
     </header>
 
     <main>
-        <section id="calendar" data-aos="fade-up">
-            <h2>Calendário de Jogos</h2>
+        <!-- Seção Sobre -->
+        <section id="about" data-aos="fade-up">
+            <h2>Sobre</h2>
+            <div class="tabs">
+                <div class="tab" id="owner-tab">
+                    <h3>Dono</h3>
+                    <a href="https://www.instagram.com/jzn_mmbbl?igsh=MzJ5dmxiMzNvZHVr" class="instagram-link" target="_blank">@jzn_mmbbl</a>
+                </div>
+                <div class="tab" id="sub-owner-tab">
+                    <h3>Sub Dono</h3>
+                    <p>Apêndice</p>
+                </div>
+                <div class="tab" id="sponsors-tab">
+                    <h3>Patrocinadores</h3>
+                    <ul>
+                        <li><a href="https://s4codeworks.github.io/S4CodeWorks-Pagina/" class="sponsor-link" target="_blank">S4 CodeWorks</a></li>
+                    </ul>
+                </div>
+                <div class="tab" id="about-club-tab">
+                    <h3>Sobre o Clube</h3>
+                    <p>A seleção England é uma seleção de RevoBall criada em 22/06/2024. O clube tem um total de 11 títulos.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="news" data-aos="fade-up">
-            <h2>Notícias do Clube</h2>
-            <div id="news-list"></div>
+        <!-- Seção Staff -->
+        <section id="staff" data-aos="fade-up" onclick="window.location.href='https://s4codeworks.github.io/EnglandCargos/';">
+            <h2>Conheça o Staff</h2>
+            <div class="staff-content">
+                <img src="https://i.imgur.com/xMehnak.png" alt="Staff - England">
+                <p>Clique para saber mais sobre o staff da England.</p>
+            </div>
         </section>
 
         <!-- Seção Redes Sociais -->
@@ -106,8 +66,8 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 England - Todos os direitos reservados</p>
+    <footer>
+        <p>&copy; 2024 England FC - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
