@@ -1,0 +1,243 @@
+/* Estilo Global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background-color: #002f6c;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para o Header */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header img {
+        height: 50px;
+    }
+}
+
+/* Seção Sobre */
+#about {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #002f6c;
+    margin-bottom: 1.5rem;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: #e8f0fe;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 calc(25% - 1.5rem);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border-top: 3px solid #002f6c;
+}
+
+.tab:hover {
+    background-color: #d0e4fd;
+}
+
+.tab h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #002f6c;
+    font-weight: 600;
+}
+
+.tab p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Links interativos */
+.instagram-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #E4405F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+    color: #C13584;
+}
+
+.sponsor-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #002f6c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sponsor-link:hover {
+    color: #388E3C;
+}
+
+/* Seção de Staff */
+#staff {
+    text-align: center;
+    padding: 2rem;
+}
+
+#staff img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#staff a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #002f6c;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#staff a:hover {
+    background-color: #00509e;
+    transform: scale(1.05);
+}
+
+/* Seção de Redes Sociais */
+#social-media {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#social-media .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#social-media .social-icon {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background-color: #002f6c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#social-media .social-icon:hover {
+    background-color: #00509e;
+    transform: scale(1.05);
+}
+
+#social-media .social-icon.instagram {
+    background-color: #E4405F;
+}
+
+#social-media .social-icon.tiktok {
+    background-color: #69C9D0;
+}
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #002f6c;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #69C9D0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #E4405F;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        flex: 1 1 100%;
+    }
+    }
