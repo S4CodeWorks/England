@@ -4,100 +4,142 @@
     <!-- Meta Tags para SEO e Responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="England - RevoBall">
-    <meta name="description" content="Página oficial da seleção England.">
-    <meta name="keywords" content="England, RevoBall, futebol, esporte, patrocinadores, redes sociais, time de futebol">
-    <meta name="robots" content="index, follow">
-    <meta property="og:description" content="Página oficial da seleção England.">
-    <meta property="og:image" content="https://i.imgur.com/r2KDTtz.png">
+    <meta name="description" content="Página oficial da seleção England, dedicada ao RevoBall.">
+    <meta name="keywords" content="England, futebol, RevoBall, equipe, análise, patrocinadores">
+    <meta property="og:title" content="England - Página Oficial">
+    <meta property="og:description" content="Descubra tudo sobre a seleção England e seu legado no RevoBall.">
+    <meta property="og:image" content="https://i.imgur.com/T2MLN5B.png">
+    <meta property="og:url" content="https://www.suaurl.com">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
+
+    <!-- Título da Página -->
     <title>England - RevoBall</title>
 
     <!-- Fonte Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
     <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <!-- Configuração do AOS (Animações ao rolar) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            AOS.init();
-        });
-    </script>
-
-    <!-- Configuração para mobile e PWA -->
-    <meta name="theme-color" content="#002f6c">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/icon.png">
-    
-    <!-- Open Graph para melhorar compartilhamento -->
-    <meta property="og:title" content="England - Página Oficial">
-    <meta property="og:description" content="Conheça a seleção England.">
-    <meta property="og:image" content="https://i.imgur.com/T2MLN5B.png">
-    <meta property="og:url" content="https://www.suaurl.com">
-    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="https://i.imgur.com/T2MLN5B.png" alt="Logo England FC">
-            <h1>England - RevoBall</h1>
+    <!-- Cabeçalho -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <h1>England FC</h1>
         </div>
-    </header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-links" class="nav-links">
+            <ul>
+                <li><a href="#about"><i class="fa fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#analysis"><i class="fa fa-chart-line"></i> Análise</a></li>
+                <li><a href="#staff"><i class="fa fa-users"></i> Staff</a></li>
+                <li><a href="#social-media"><i class="fa fa-share-alt"></i> Redes Sociais</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
+    <!-- Conteúdo Principal -->
     <main>
         <!-- Seção Sobre -->
-        <section id="about" data-aos="fade-up">
-            <h2>Sobre</h2>
-            <div class="tabs">
-                <div class="tab" id="owner-tab">
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-info-circle"></i> Sobre a Seleção</h2>
+                <p>Conheça nossa história e conquistas no RevoBall</p>
+            </div>
+            <div class="about-content">
+                <article>
+                    <i class="fas fa-user"></i>
                     <h3>Dono</h3>
-                    <a href="https://www.instagram.com/jzn_mmbbl?igsh=MzJ5dmxiMzNvZHVr" class="instagram-link" target="_blank">@jzn_mmbbl</a>
-                </div>
-                <div class="tab" id="sub-owner-tab">
+                    <p><a href="https://www.instagram.com/jzn_mmbbl?igsh=MzJ5dmxiMzNvZHVr" target="_blank">@jzn_mmbbl</a></p>
+                </article>
+                <article>
+                    <i class="fas fa-user-tie"></i>
                     <h3>Sub Dono</h3>
                     <p>Apêndice</p>
-                </div>
-                <div class="tab" id="sponsors-tab">
+                </article>
+                <article>
+                    <i class="fas fa-handshake"></i>
                     <h3>Patrocinadores</h3>
-                    <ul>
-                        <li><a href="https://s4codeworks.github.io/S4CodeWorks-Pagina/" class="sponsor-link" target="_blank">S4 CodeWorks</a></li>
-                    </ul>
-                </div>
-                <div class="tab" id="about-club-tab">
+                    <p><a href="https://s4codeworks.github.io/S4CodeWorks-Pagina/" target="_blank">S4 CodeWorks</a></p>
+                </article>
+                <article>
+                    <i class="fas fa-futbol"></i>
                     <h3>Sobre o Clube</h3>
-                    <p>A seleção England é uma seleção de RevoBall criada em 22/06/2024. O clube tem um total de 11 títulos.</p>
+                    <p>A seleção England foi fundada em 22/06/2024 e já conquistou 11 títulos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Análise -->
+        <section id="analysis" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-bar"></i> Análise da Seleção</h2>
+                <p>Detalhes e curiosidades sobre nossa equipe</p>
+            </div>
+            <div class="analysis-content">
+                <div>
+                    <h3>Informações Gerais</h3>
+                    <p><strong>Nome Atual:</strong> Seleção Inglesa 『ENG』</p>
+                    <p><strong>Fundação:</strong> 22/06/2024</p>
+                    <p><strong>Média do Elenco:</strong> 8,6</p>
+                </div>
+                <div>
+                    <h3>Últimas Notícias</h3>
+                    <ul>
+                        <li>Reformulação após pausa de 1 mês.</li>
+                        <li>Novos reforços para 2025 confirmados.</li>
+                        <li>Amistoso U-20 no domingo (29/12).</li>
+                        <li>Renovação do patrocínio concluída.</li>
+                        <li>Parceria com 'HAAT DESIGNER' até 2025.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Seção Staff -->
-        <section id="staff" data-aos="fade-up" onclick="window.location.href='https://s4codeworks.github.io/EnglandCargos/';">
-            <h2>Conheça o Staff</h2>
-            <div class="staff-content">
-                <img src="https://i.imgur.com/xMehnak.png" alt="Staff - England">
-                <p>Clique para saber mais sobre o staff da England.</p>
+        <section id="staff" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Conheça o Staff</h2>
+                <p>Os bastidores de quem faz a magia acontecer</p>
+            </div>
+            <div class="staff-card" onclick="location.href='https://s4codeworks.github.io/EnglandCargos/';">
+                <i class="fas fa-user-cog"></i>
+                <p>Clique aqui para saber mais sobre nossa equipe técnica.</p>
             </div>
         </section>
 
         <!-- Seção Redes Sociais -->
-        <section id="social-media" data-aos="fade-up">
-            <h2>Redes Sociais</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/inglaterra_rvbbl/profilecard/?igsh=MTlhNzRpeG50a2NuZQ==" target="_blank" class="social-icon instagram">Instagram</a>
-                <a href="https://www.tiktok.com/@the.haat?_t=8rVOmT73XfD&_r=1" target="_blank" class="social-icon tiktok">TikTok</a>
+        <section id="social-media" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-share-alt"></i> Redes Sociais</h2>
+                <p>Acompanhe nossos perfis e novidades</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/inglaterra_rvbbl/profilecard/?igsh=MTlhNzRpeG50a2NuZQ==" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@the.haat?_t=8rVOmT73XfD&_r=1" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
             </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 England FC - Todos os direitos reservados.</p>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
