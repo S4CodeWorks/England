@@ -276,3 +276,28 @@ footer {
         grid-template-columns: 1fr;
     }
         }
+
+/* Próxima Partida */
+#next-match .next-match-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#next-match .match-info h3 {
+    font-size: 1.5rem;
+    color: rgb(179, 0, 0);
+    margin-bottom: 10px;
+}
+
+#next-match .match-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
