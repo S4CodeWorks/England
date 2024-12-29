@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 /* Cabeçalho */
 header {
-    background-color: rgb(179, 0, 0); /* Vermelho mais suave misturado com preto */
+    background-color: rgb(80, 40, 40); /* Vermelho mais suave misturado com preto */
     color: #fff;
     padding: 20px;
     position: relative;
@@ -50,7 +50,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 1rem;
-    color: #fff;
+    color: rgb(80, 40, 40);
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -74,6 +74,7 @@ nav ul li a:hover {
     height: 5px;
     background-color: #fff;
     border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Estilos do menu em telas grandes */
@@ -86,33 +87,64 @@ nav ul li a:hover {
     display: none;
 }
 
-/* Quando o menu estiver ativo, ele deve aparecer */
-.nav-links.active {
-    display: block;
+.close-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgb(179, 0, 0); /* Vermelho mais suave misturado com preto */
-    text-align: center;
-    padding: 20px 0;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
 }
 
-/* Estilos do menu quando estiver aberto */
+.close-menu:hover {
+    color: #f00; /* Cor ao passar o mouse (opcional) */
+}
+
+/* Atualização do menu aberto */
+.nav-links.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(8px); /* Aplica o desfoque */
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 0;
+}
+
+/* Estilos das opções do menu */
 .nav-links ul {
-    display: block;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .nav-links ul li {
-    display: block;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .nav-links ul li a {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Aumenta o tamanho do texto */
     color: #fff;
     font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #ccc; /* Cor de hover */
 }
 
 /* Responsividade */
@@ -126,7 +158,7 @@ nav ul li a:hover {
     }
 
     .nav-links.active {
-        display: block;
+        display: flex;
     }
 }
 
@@ -138,7 +170,7 @@ nav ul li a:hover {
 
 .section-header h2 {
     font-size: 2rem;
-    color: rgb(179, 0, 0); /* Vermelho mais suave misturado com preto */
+    color: rgb(80, 40, 40); /* Vermelho mais suave misturado com preto */
     margin-bottom: 10px;
 }
 
@@ -174,7 +206,7 @@ nav ul li a:hover {
 .about-content article h3, .analysis-content div h3 {
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: rgb(179, 0, 0); /* Vermelho mais suave misturado com preto */
+    color: rgb(80, 40, 40); /* Vermelho mais suave misturado com preto */
 }
 
 .about-content article p, .analysis-content div p {
@@ -183,7 +215,7 @@ nav ul li a:hover {
 }
 
 .about-content article a {
-    color: rgb(179, 0, 0); /* Vermelho mais suave misturado com preto */
+    color: rgb(80, 40, 40); /* Vermelho mais suave misturado com preto */
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -301,3 +333,69 @@ footer {
     color: #555;
     margin: 5px 0;
 }
+
+/* Seção Sub-20 */
+#sub-20 .sub-20-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#sub-20 .sub-20-staff, #sub-20 .sub-20-squad {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sub-20 h3 {
+    color: rgb(179, 0, 0);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#sub-20 p, #sub-20 .player-card {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo para os cards dos jogadores */
+.player-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 248, 220); /* Fundo bege claro */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.player-card .position {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(179, 0, 0);
+    background-color: rgba(179, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.player-card p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    }
