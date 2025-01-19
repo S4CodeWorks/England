@@ -1,0 +1,324 @@
+<html><head><base href="https://example.com"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>England | Mayor</title><style>
+  :root {
+    --england-red: #cf142b;
+    --england-blue: #00247d;
+    --gradient-1: linear-gradient(135deg, var(--england-blue), #001a5c);
+    --gradient-2: linear-gradient(45deg, var(--england-red), #ff1f1f);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .header {
+    background: var(--gradient-1);
+    color: white;
+    padding: 6rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: titleFloat 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: backgroundShift 15s ease-in-out infinite alternate;
+  }
+
+  .welcome {
+    padding: 4rem 3rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: -100px auto 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .welcome h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--england-blue), var(--england-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s linear infinite;
+  }
+
+  .roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 1400px;
+  }
+
+  .player-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transform-style: preserve-3d;
+  }
+
+  .player-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(255,255,255,0.1) 0%, 
+                transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .player-card:hover::before {
+    opacity: 1;
+  }
+
+  .player-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: var(--england-blue);
+  }
+
+  .player-card h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-2);
+    transition: width 0.3s ease;
+  }
+
+  .player-card:hover h3::after {
+    width: 100%;
+  }
+
+  .staff-list {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    margin: 4rem auto;
+    max-width: 1000px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transform-style: preserve-3d;
+  }
+
+  .staff-category {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .staff-category:hover {
+    transform: translateX(20px) scale(1.02);
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .footer {
+    background: var(--gradient-1);
+    color: white;
+    padding: 4rem 3rem;
+    text-align: center;
+    margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes backgroundShift {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.2) rotate(5deg); }
+  }
+
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  /* Add more modern animations and responsive design improvements */
+
+</style></head><body>
+  <header class="header">
+    <h1>Mayor</h1>
+  </header>
+
+  <div class="welcome" id="welcome">
+    <h2>Bem-vindo à England</h2>
+    <p>Conheça nossa equipe da categoria Mayor e a nossa equipe de staff.</p>
+  </div>
+
+  <section class="section" id="roster">
+    <h2>Elenco</h2>
+    <div class="roster-grid">
+      <div class="player-card">
+        <h3>MAURO_SHAMPOO</h3>
+        <p>ID: #dyghpl</p>
+        <p>Discord: @CR7_PRIME_07</p>
+      </div>
+      <div class="player-card">
+        <h3>Noialove</h3>
+        <p>ID: #3hjd7s</p>
+        <p>Discord: @noiadommb_30691</p>
+      </div>
+      <div class="player-card">
+        <h3>Igzrsx7</h3>
+        <p>ID: #3pmbje</p>
+        <p>Discord: @igzrsx7_47173</p>
+      </div>
+      <div class="player-card">
+        <h3>RinDB</h3>
+        <p>ID: #2bubg3</p>
+        <p>Discord: @Y.kanty</p>
+      </div>
+      <div class="player-card">
+        <h3>Apen..</h3>
+        <p>ID: #dkp54j</p>
+        <p>Discord: @aleatoriocoisa_9965</p>
+      </div>
+      <div class="player-card">
+        <h3>thkcacoж</h3>
+        <p>ID: #479k5f</p>
+        <p>Discord: Não fornecido</p>
+      </div>
+      <div class="player-card">
+        <h3>ashhhhhhh</h3>
+        <p>ID: #Nsvbyj</p>
+        <p>Discord: @.ash</p>
+      </div>
+      <div class="player-card">
+        <h3>Gtwxzq7</h3>
+        <p>ID: #7brm3e</p>
+        <p>Discord: @crxzq</p>
+      </div>
+      <div class="player-card">
+        <h3>Griz</h3>
+        <p>ID: #6y5csk</p>
+        <p>Discord: @lordos8709</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="staff">
+    <h2>Equipe de Staff</h2>
+    <div class="staff-list">
+      <div class="staff-category">
+        <h3>Owner</h3>
+        <p>JZNKUMMER</p>
+      </div>
+      <div class="staff-category">
+        <h3>Administradores</h3>
+        <p>noia</p>
+      </div>
+      <div class="staff-category">
+        <h3>Técnicos</h3>
+        <p>APÊNDICE | ANCELOTTI</p>
+      </div>
+      <div class="staff-category">
+        <h3>Capitão</h3>
+        <p>CHOTA</p>
+      </div>
+      <div class="staff-category">
+        <h3>Designer</h3>
+        <p>DH</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Copyright 2025 Seleção England – Categoria Mayor</p>
+  </footer>
+
+  <script>
+    // Add Montserrat font
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // Mouse move effect on cards
+    document.querySelectorAll('.player-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+        const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+      });
+    });
+
+    // Enhanced intersection observer animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0) rotate(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.player-card, .staff-category').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px) rotate(-2deg)';
+      el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      observer.observe(el);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,258 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>England | Site oficial</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="cursor"></div>
+  
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="logo-container">
+      <img class="logo" src="englandlogo.png" alt="Logo" width="50" height="50">
+        <div class="brand-text">
+          <span>England</span>
+          <small>S4 CodeWorks</small>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-toggle">
+      <div class="hamburger">
+        <div class="hamburger-lines">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </div>
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="mayor.html" class="nav-link">Mayor</a></li>
+      <li><a href="#sub20" class="nav-link">Sub-20</a></li>
+      <li><a href="#sub15" class="nav-link">Sub-15</a></li>
+      <li><a href="#about" class="nav-link">Sobre</a></li>
+      <li><a href="#news" class="nav-link">Notícias</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="glitch" data-text="England FC">England</h1>
+      <p class="subtitle">Seja muito bem-vindo!</p>
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+        <span>Role para descobrir</span>
+      </div>
+    </div>
+    <div class="hero-background">
+      <div class="shapes"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2 class="section-title">Sobre Nós</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-decoration card-decoration-1"></div>
+          <div class="card-decoration card-decoration-2"></div>
+          <div class="card-content">
+            <div class="card-icon">👑</div>
+            <h3 class="card-title">Dono</h3>
+            <p class="card-text">Jznkummer</p>
+          </div>
+        </div>
+        
+        <div class="about-card">
+          <div class="card-decoration card-decoration-1"></div>
+          <div class="card-decoration card-decoration-2"></div>
+          <div class="card-content">
+            <div class="card-icon">⚡</div>
+            <h3 class="card-title">Sub Dono</h3>
+            <p class="card-text">S4</p>
+          </div>
+        </div>
+        
+        <div class="about-card">
+          <div class="card-decoration card-decoration-1"></div>
+          <div class="card-decoration card-decoration-2"></div>
+          <div class="card-content">
+            <div class="card-icon">🌟</div>
+            <h3 class="card-title">Patrocinador Principal</h3>
+            <p class="card-text">S4 CodeWorks</p>
+          </div>
+        </div>
+        
+        <div class="about-card">
+          <div class="card-decoration card-decoration-1"></div>
+          <div class="card-decoration card-decoration-2"></div>
+          <div class="card-content">
+            <div class="card-icon">📅</div>
+            <h3 class="card-title">Data de Fundação</h3>
+            <p class="card-text">22/06/2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <h2 class="section-title">England Notícias</h2>
+      <div class="news-container">
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image-container">
+              <img src="timesconfirmados.jpg" alt="Times confirmados" class="news-image">
+              <div class="news-overlay"></div>
+              <span class="news-category">Campeonato</span>
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">--</span>
+                <span class="news-reading-time">Copa CMDB</span>
+              </div>
+              <h3 class="news-title">3ª edição CMDB</h3>
+              <p class="news-excerpt">3ª A temporada de encerramento está para começar e veio recheada de times fortes para buscar a tão sonhada CMDB, quem leva essa temporada? Já tem um favorito?🇧🇷</p>
+              <div class="news-actions">
+                <button class="news-btn primary">
+                  <span>Ler mais</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <div class="news-share">
+                  <button class="share-btn">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="staff" class="section">
+  <h2 class="section-title">Staff</h2>
+  <div class="staff-grid">
+    <div class="staff-card">
+      <div class="staff-card-inner">
+        <div class="staff-card-front">
+          <div class="staff-icon">👨‍💼</div>
+          <h3>Administrador principal</h3>
+          <div class="staff-decoration"></div>
+        </div>
+        <div class="staff-card-back">
+          <h4>JZN</h4>
+          <p>Dono/Administrador geral</p>
+          <div class="staff-social">
+            <!-- Ícone do Instagram -->
+            <a href="https://instagram.com" target="_blank" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.342 3.608 1.316.975.975 1.255 2.242 1.316 3.608.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.062 1.366-.342 2.633-1.316 3.608-.975.975-2.242 1.255-3.608 1.316-1.267.058-1.647.07-4.851.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.342-3.608-1.316-.975-.975-1.255-2.242-1.316-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.342-2.633 1.316-3.608.975-.975 2.242-1.255 3.608-1.316C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.012 7.052.07 5.771.129 4.587.392 3.535 1.444 2.483 2.496 2.22 3.68 2.161 4.961.072 8.332.072 15.668 2.161 19.039c.059 1.281.322 2.465 1.374 3.517 1.052 1.052 2.236 1.315 3.517 1.374 1.281.059 1.684.071 4.948.071 3.264 0 3.667-.012 4.948-.071 1.281-.059 2.465-.322 3.517-1.374 1.052-1.052 1.315-2.236 1.374-3.517.059-1.281.071-1.684.071-4.948 0-3.264-.012-3.667-.071-4.948-.059-1.281-.322-2.465-1.374-3.517-1.052-1.052-2.236-1.315-3.517-1.374C15.667.072 15.264 0 12 0zM12 5.838c-3.398 0-6.162 2.764-6.162 6.162 0 3.398 2.764 6.162 6.162 6.162 3.398 0 6.162-2.764 6.162-6.162 0-3.398-2.764-6.162-6.162-6.162zm0 10.006c-2.12 0-3.844-1.724-3.844-3.844S9.88 8.156 12 8.156s3.844 1.724 3.844 3.844-1.724 3.844-3.844 3.844zm4.406-10.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="staff-card">
+  <div class="staff-card-inner">
+    <div class="staff-card-front">
+      <div class="staff-icon">👨‍⚕️</div>
+      <h3>Administrador geral</h3>
+      <div class="staff-decoration"></div>
+    </div>
+    <div class="staff-card-back">
+      <h4>Apêndice</h4>
+      <p>Administrador geral</p>
+      <div class="staff-social">
+        <!-- Ícone do Instagram -->
+        <a href="https://instagram.com" target="_blank" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.342 3.608 1.316.975.975 1.255 2.242 1.316 3.608.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.062 1.366-.342 2.633-1.316 3.608-.975.975-2.242 1.255-3.608 1.316-1.267.058-1.647.07-4.851.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.342-3.608-1.316-.975-.975-1.255-2.242-1.316-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.342-2.633 1.316-3.608.975-.975 2.242-1.255 3.608-1.316C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.012 7.052.07 5.771.129 4.587.392 3.535 1.444 2.483 2.496 2.22 3.68 2.161 4.961.072 8.332.072 15.668 2.161 19.039c.059 1.281.322 2.465 1.374 3.517 1.052 1.052 2.236 1.315 3.517 1.374 1.281.059 1.684.071 4.948.071 3.264 0 3.667-.012 4.948-.071 1.281-.059 2.465-.322 3.517-1.374 1.052-1.052 1.315-2.236 1.374-3.517.059-1.281.071-1.684.071-4.948 0-3.264-.012-3.667-.071-4.948-.059-1.281-.322-2.465-1.374-3.517-1.052-1.052-2.236-1.315-3.517-1.374C15.667.072 15.264 0 12 0zM12 5.838c-3.398 0-6.162 2.764-6.162 6.162 0 3.398 2.764 6.162 6.162 6.162 3.398 0 6.162-2.764 6.162-6.162 0-3.398-2.764-6.162-6.162-6.162zm0 10.006c-2.12 0-3.844-1.724-3.844-3.844S9.88 8.156 12 8.156s3.844 1.724 3.844 3.844-1.724 3.844-3.844 3.844zm4.406-10.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="staff-card">
+  <div class="staff-card-inner">
+    <div class="staff-card-front">
+      <div class="staff-icon">👨‍🏫</div>
+      <h3>Técnico</h3>
+      <div class="staff-decoration"></div>
+    </div>
+    <div class="staff-card-back">
+      <h4>--</h4>
+      <p>Técnico principal da England</p>
+      <div class="staff-social">
+        <!-- Ícone do Instagram -->
+        <a href="https://instagram.com" target="_blank" class="social-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.342 3.608 1.316.975.975 1.255 2.242 1.316 3.608.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.85c-.062 1.366-.342 2.633-1.316 3.608-.975.975-2.242 1.255-3.608 1.316-1.267.058-1.647.07-4.851.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.342-3.608-1.316-.975-.975-1.255-2.242-1.316-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.342-2.633 1.316-3.608.975-.975 2.242-1.255 3.608-1.316C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.012 7.052.07 5.771.129 4.587.392 3.535 1.444 2.483 2.496 2.22 3.68 2.161 4.961.072 8.332.072 15.668 2.161 19.039c.059 1.281.322 2.465 1.374 3.517 1.052 1.052 2.236 1.315 3.517 1.374 1.281.059 1.684.071 4.948.071 3.264 0 3.667-.012 4.948-.071 1.281-.059 2.465-.322 3.517-1.374 1.052-1.052 1.315-2.236 1.374-3.517.059-1.281.071-1.684.071-4.948 0-3.264-.012-3.667-.071-4.948-.059-1.281-.322-2.465-1.374-3.517-1.052-1.052-2.236-1.315-3.517-1.374C15.667.072 15.264 0 12 0zM12 5.838c-3.398 0-6.162 2.764-6.162 6.162 0 3.398 2.764 6.162 6.162 6.162 3.398 0 6.162-2.764 6.162-6.162 0-3.398-2.764-6.162-6.162-6.162zm0 10.006c-2.12 0-3.844-1.724-3.844-3.844S9.88 8.156 12 8.156s3.844 1.724 3.844 3.844-1.724 3.844-3.844 3.844zm4.406-10.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-logo">
+<img src="englandlogo.png" alt="Logo England" width="40" height="40">
+          </a>
+          <a href="https://instagram.com" target="_blank" class="footer-social-link">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" class="footer-social-link">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-shop">
+        <h3 class="shop-title">Publicidade</h3>
+        <a href="https://www.amazon.com" target="_blank" class="amazon-btn">
+          Loja Oficial na Amazon
+          <svg class="amazon-icon" viewBox="0 0 24 24">
+            <path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.12 17.12 0 01-5.43-2.85A.338.338 0 01.017 18.5c-.004-.06.008-.11.028-.16z M17.692 12.708c0 .198.06.367.177.507.117.14.25.27.4.39.194.16.41.33.648.51.236.18.39.35.467.51.077.16.115.33.115.51 0 .23-.07.44-.21.63-.14.19-.35.28-.63.28-.28 0-.49-.09-.63-.27a.907.907 0 01-.21-.61v-.05a.02.02 0 00-.02-.02H14.6c-.013 0-.02.006-.02.02 0 .396.13.76.39 1.09s.57.57.93.72c.36.15.77.22 1.22.22.51 0 .98-.11 1.42-.33.44-.22.78-.53 1.03-.93.25-.4.37-.84.37-1.33 0-.36-.08-.69-.24-.99-.16-.3-.39-.57-.69-.81-.3-.24-.62-.47-.97-.69-.35-.22-.6-.43-.76-.63-.16-.2-.24-.43-.24-.69 0-.23.07-.44.21-.63.14-.19.35-.28.63-.28.28 0 .49.09.63.27.14.18.21.39.21.63v.05c0 .013.007.02.02.02h2.17c.015 0 .02-.007.02-.02 0-.4-.13-.76-.38-1.09-.25-.33-.57-.58-.94-.74-.37-.16-.79-.24-1.24-.24-.51 0-.97.11-1.39.32-.42.21-.75.51-.99.89-.24.38-.36.8-.36 1.26 0 .36.08.69.24.99.16.3.39.57.69.81.3.24.62.47.97.69.35.22.6.43.76.63.16.2.24.43.24.69z"/>
+          </svg>
+        </a>
+      </div>
+      
+      <p class="copyright">
+        &copy; 2024 England - Todos os direitos reservados. 
+        <br>
+        Desenvolvido com ❤️ pela equipe da S4 CodeWorks
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
